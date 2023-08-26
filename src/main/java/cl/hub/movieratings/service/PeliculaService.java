@@ -16,4 +16,6 @@ public interface PeliculaService {
 
     List<Pelicula> obtenerPeliculas();
 
+    Pelicula obtenerPeliculaPorNombre(String nombre);
+
 }

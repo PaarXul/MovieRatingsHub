@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 @EnableJpaRepositories
 public interface PeliculaRepository extends JpaRepository<Pelicula, Long> {
+
+    Pelicula findByTitulo(String titulo);
 }

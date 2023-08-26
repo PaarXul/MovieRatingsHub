@@ -51,4 +51,9 @@ public class PeliculaServiceImpl implements PeliculaService {
         return peliculaRepository.findAll();
     }
 
+    @Override
+    public Pelicula obtenerPeliculaPorNombre(String nombre) {
+        return peliculaRepository.findByTitulo(nombre);
+    }
+
 }
