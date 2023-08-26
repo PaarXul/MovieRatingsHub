@@ -15,7 +15,7 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @Table(name = "generos")
-public class genero {
+public class Genero {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,6 +26,6 @@ public class genero {
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "genero")
     @JsonIgnore
-    private Set<pelicula> pelicula = new HashSet<>();
+    private Set<Pelicula> pelicula = new HashSet<>();
 
 }

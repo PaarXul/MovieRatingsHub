@@ -15,7 +15,7 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @Table(name = "peliculas")
-public class pelicula {
+public class Pelicula {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,11 +29,11 @@ public class pelicula {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_genero")
-    private genero genero;
+    private Genero genero;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "pelicula")
     @JsonIgnore
-    private Set<calificacion> calificacion = new HashSet<>();
+    private Set<Calificacion> calificacion = new HashSet<>();
 
 
 

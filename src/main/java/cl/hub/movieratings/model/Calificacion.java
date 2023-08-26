@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Table(name = "calificaciones")
-public class calificacion {
+public class Calificacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,10 +22,10 @@ public class calificacion {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_pelicula")
-    private pelicula pelicula;
+    private Pelicula pelicula;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_usuario")
-    private usuario usuario;
+    private Usuario usuario;
 
 }
