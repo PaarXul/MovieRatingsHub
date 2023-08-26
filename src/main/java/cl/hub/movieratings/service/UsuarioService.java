@@ -19,4 +19,6 @@ public interface UsuarioService {
 
     List<Usuario> obtenerUsuarios();
 
+    Usuario Login(String nombre, String contrasena);
+
 }

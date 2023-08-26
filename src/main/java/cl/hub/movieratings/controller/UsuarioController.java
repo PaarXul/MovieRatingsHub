@@ -52,4 +52,10 @@ public class UsuarioController {
     }
 
 
+    @GetMapping("/login/{nombre}/{contrasena}")
+    public ResponseEntity<Usuario> Login(@PathVariable("nombre") String nombre, @PathVariable("contrasena") String contrasena) {
+        return ResponseEntity.ok(usuarioService.Login(nombre, contrasena));
+    }
+
+
 }

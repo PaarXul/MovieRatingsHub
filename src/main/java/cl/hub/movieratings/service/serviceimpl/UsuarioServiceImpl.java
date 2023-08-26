@@ -55,4 +55,9 @@ public class UsuarioServiceImpl implements UsuarioService {
     public List<Usuario> obtenerUsuarios() {
         return usuarioRepository.findAll();
     }
+
+    @Override
+    public Usuario Login(String nombre, String contrasena) {
+        return usuarioRepository.findByNombreusuarioAndContrasena(nombre, contrasena);
+    }
 }
